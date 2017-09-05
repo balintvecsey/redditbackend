@@ -31,11 +31,11 @@ public class PostController {
 
   @PutMapping ("/posts/{id}/upvote")
   public Post upVote(@PathVariable Long id) {
-    return redditService.upVote(id);
+    return redditService.vote(id, 1);
   }
 
   @PutMapping ("/posts/{id}/downvote")
   public Post downVote(@PathVariable Long id) {
-    return redditService.downVote(id);
+    return redditService.vote(id, -1);
   }
 }

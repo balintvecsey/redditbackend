@@ -26,16 +26,9 @@ public class RedditService {
     return hashPosts;
   }
 
-  public Post upVote(Long id) {
+  public Post vote(Long id, int addition) {
     post = postRepository.findOne(id);
-    post.setScore(post.getScore() + 1);
-    postRepository.save(post);
-    return post;
-  }
-
-  public Post downVote(Long id) {
-    post = postRepository.findOne(id);
-    post.setScore(post.getScore() - 1);
+    post.setScore(post.getScore() + addition);
     postRepository.save(post);
     return post;
   }
