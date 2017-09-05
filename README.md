@@ -1,2 +1,2 @@
-# redditbackend
-A simple Reddit clone backend.
+# redditfrontend
+A simple Reddit clone backend, just for practice.
